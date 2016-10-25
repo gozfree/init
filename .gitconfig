@@ -1,0 +1,15 @@
+[user]
+	email = gozfree@163.com
+	name = gozfree
+[core]
+	editor = vim
+[push]
+	default = matching
+[credential]
+	helper = store
+[alias]
+	lg = log --stat --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen (%cr) %C(bold blue)<%an>%Creset'
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
