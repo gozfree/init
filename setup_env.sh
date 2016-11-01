@@ -14,6 +14,7 @@ exuberant-ctags
 ffmpeg
 g++ git
 htop
+libjansson-dev liblua5.2-dev
 meld mplayer
 nginx
 ppa-purge python-pip python-m2crypto
@@ -63,21 +64,21 @@ remove_software()
 install_config()
 {
 	for config_item in $config_list; do
-		cp $config_item -fr ~/
+		cp -fr $config_item ~/
 	done
 }
 
 remove_config()
 {
 	for config_item in $config_list; do
-		rm $config_item -fr
+		rm -fr $config_item
 	done
 }
 
 
 install()
 {
-	#add_ppa
+	add_ppa
 	install_software
 	install_config
 }
