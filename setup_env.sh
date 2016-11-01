@@ -12,14 +12,14 @@ dpkg-dev
 dput
 exuberant-ctags
 ffmpeg
-g++ git
+gcc-mingw-w64 g++ git
 htop
 libjansson-dev liblua5.2-dev
 meld mplayer
 nginx
 ppa-purge python-pip python-m2crypto
 rar
-subversion
+subversion synaptic
 vim vlc
 
 "
@@ -39,7 +39,7 @@ ppa:gozfree/ppa
 add_ppa()
 {
 	for ppa_item in $ppa_list; do
-		sudo add-apt-repository $ppa_item
+		sudo add-apt-repository -y $ppa_item
 	done
 }
 
