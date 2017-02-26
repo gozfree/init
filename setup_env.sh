@@ -28,6 +28,7 @@ config_list="
 .gitconfig
 .vimrc
 .vim/
+.crx/
 "
 
 ppa_list="
