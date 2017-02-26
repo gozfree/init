@@ -8,18 +8,18 @@ ACTION=$1
 software_list="
 build-essential
 curl
-dpkg-dev
-dput
+dpkg-dev dput
 exuberant-ctags
 ffmpeg
 gcc-mingw-w64 g++ git
 htop
 libjansson-dev liblua5.2-dev
 meld mplayer
-nginx
+nextcloud-client nginx
+openssh-server
 ppa-purge python-pip python-m2crypto
 rar
-subversion synaptic
+shadowsocks-qt5 subversion synaptic
 vim vlc
 
 "
@@ -32,6 +32,8 @@ config_list="
 
 ppa_list="
 ppa:gozfree/ppa
+ppa:hzwhuang/ss-qt5
+ppa:nextcloud-devs/client
 
 "
 
