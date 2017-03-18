@@ -9,6 +9,7 @@ software_list="
 build-essential
 curl
 dpkg-dev dput
+exfat-utils
 exuberant-ctags
 ffmpeg
 gcc-mingw-w64 g++ git
@@ -17,7 +18,7 @@ libjansson-dev liblua5.2-dev
 meld mplayer
 nextcloud-client nginx
 openssh-server
-ppa-purge python-pip python-m2crypto
+pkg-config ppa-purge python-pip python-m2crypto
 rar
 shadowsocks-qt5 subversion synaptic
 vim vlc
