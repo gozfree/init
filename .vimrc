@@ -76,44 +76,6 @@ nmap <S-y> :.w! ~/.vbuf<CR>
 nmap <S-p> :r ~/.vbuf<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"进行版权声明的设置
-"添加或更新头
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <F5> :call TitleDet()<cr>'s
-function TitleDet()
-    let n = 1
-    while n < 8
-        let line = getline(n)
-        let str = '^\s\*\s*\S*updated:\S*.*$'
-        if line =~ str
-            call UpdateTitle()
-            return
-        endif
-        let n = n + 1
-    endwhile
-    call AddTitle()
-endfunction
-
-function AddTitle()
-    call append(0, "/******************************************************************************")
-    call append(1, " * Copyright (C) 2014-2016")
-    call append(2, " * file:    ".expand("%:t"))
-    call append(3, " * author:  gozfree <gozfree@163.com>")
-    call append(4, " * created: ".strftime("%Y-%m-%d %H:%M"))
-    call append(5, " * updated: ".strftime("%Y-%m-%d %H:%M"))
-    call append(6, " ******************************************************************************/")
-    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
-endfunc
-function UpdateTitle()
-    normal m'
-    execute '/ * updated:/s@:.*$@\=strftime(": %Y-%m-%d %H:%M")@'
-    normal ''
-    execute "noh"
-    echohl WarningMsg | echo "Successful in updating the copyright." | echohl None
-endfunction
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "文件和函数列表
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F12> :Tlist<cr>'s
