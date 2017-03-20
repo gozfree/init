@@ -9,7 +9,7 @@ ppa_exist=0
 
 minimal_list="
 build-essential
-curl
+ckermit curl
 exfat-utils exuberant-ctags
 ffmpeg
 g++ git
